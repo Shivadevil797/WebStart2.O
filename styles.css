@@ -34,6 +34,8 @@
     width: 100%;
     max-width: 450px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    opacity: 0.9;
+    animation: fadeIn 0.2s ease-in-out;
   }
   
   .form-box h2 {
