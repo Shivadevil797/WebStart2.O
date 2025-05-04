@@ -1,0 +1,349 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #1d0039;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+ 
+  #vanta-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+ 
+  .form-box {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  }
+  
+  .form-box h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #fff;
+  }
+  
+  input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  .inline-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .checkbox-group label {
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  .checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #d4ff00;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: #1d0039;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #a3cc00;
+  }
+  
+  /* Terms and Conditions Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    overflow-y: auto;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    color: #333;
+  }
+  
+  .modal h3 {
+    margin-bottom: 15px;
+  }
+  
+  .modal ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+  }
+  
+  .close {
+    color: #aaa;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  a {
+    color: #d4ff00;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  /* Styling the question */
+p {
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  /* Inline group for radio buttons */
+  .inline-group {
+    display: flex;
+    justify-content: flex-start; 
+    gap: 10px; 
+    margin-bottom: 15px;
+  }
+  
+
+  .inline-option {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #fff;
+  }
+  
+  .inline-option input[type="radio"] {
+    margin-right: 5px; 
+    accent-color: #d4ff00; 
+  }
+  
+  .inline-option label {
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  
+  .inline-option input[type="radio"]:checked + label {
+    font-weight: bold;
+    color: #d4ff00; 
+  }
+  
+  .inline-group label {
+    font-size: 1rem;
+  }
+ 
+  
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    padding: 50px;
+  }
+  
+
+  .modal-content {
+    background-color: #1d0039;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px; 
+    margin: 5% auto; /* Center the modal */
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow-y: auto;
+    max-height: 80vh; 
+  }
+  
+  
+  .close {
+    color: #d4ff00; 
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .close:hover {
+    color: #fff; /* Change color on hover */
+  }
+  
+  /* Heading inside modal */
+  .modal-content h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Paragraph inside modal */
+  .modal-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  /* List inside modal */
+  .modal-content ol {
+    font-size: 1rem;
+    margin-left: 20px;
+  }
+  
+  /* List item inside modal */
+  .modal-content ol li {
+    margin-bottom: 10px;
+  }
+  
+  /* Modal animation (fade-in effect) */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .modal-content {
+    animation: fadeIn 0.5s ease-in-out; /* Add fade-in animation */
+  }
+  /* Small screens (phones, less than 600px) */
+@media (max-width: 600px) {
+    .form-box {
+      padding: 20px;
+      width: 90%;
+    }
+  
+    .form-box h2 {
+      font-size: 1.5rem;
+    }
+  
+    label,
+    .checkbox-group label,
+    .inline-option {
+      font-size: 0.9rem;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+  
+    button[type="submit"] {
+      font-size: 1rem;
+      padding: 8px;
+    }
+  
+    .modal-content {
+      width: 95%;
+      padding: 20px;
+    }
+  
+    .modal-content h3 {
+      font-size: 1.2rem;
+    }
+  
+    .modal-content p,
+    .modal-content ol {
+      font-size: 0.9rem;
+    }
+  
+    .close {
+      font-size: 24px;
+    }
+  }
+  
+  /* Medium screens (tablets, 600px–768px) */
+  @media (min-width: 601px) and (max-width: 768px) {
+    .form-box {
+      width: 80%;
+      padding: 30px;
+    }
+  
+    .modal-content {
+      width: 90%;
+    }
+  }
+  

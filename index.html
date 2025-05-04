@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration Form</title>
+  <link rel="icon" href="LOGO (1).jpg" type="image/jpg">
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="firebaseauth.js" defer></script>
+</head>
+
+<body>
+  <div id="vanta-bg"></div>
+
+  <div class="form-box">
+    <h2>Registration Form</h2>
+    <form id="registration-form">
+      <label for="name">👤 Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required />
+
+      <label for="email">✉ Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+
+      <label for="mobile">📞 Mobile</label>
+      <input type="tel" id="mobile" placeholder="Enter your mobile number" required />
+
+      <label for="class">🖥 Class</label>
+      <select id="class" required>
+        <option value="">Select your class</option>
+        <option>1st BCA</option>
+        <option>2nd BCA</option>
+        <option>3rd BCA</option>
+      </select>
+
+      <label for="section">Section</label>
+      <select id="section" required>
+        <option value="">Select your section</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+      </select>
+
+      <p>Do you have a laptop?</p>
+      <div class="inline-group">
+        <label class="inline-option"><input type="radio" name="laptop" value="yes" required /> Yes</label>
+        <label class="inline-option"><input type="radio" name="laptop" value="no" required /> No</label>
+      </div>
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="terms" required />
+        <label for="terms">
+          I agree to the <a href="#" onclick="showTerms()">Terms and Conditions</a>
+        </label>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <!-- Terms and Conditions Modal -->
+  <div id="termsModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="hideTerms()">&times;</span>
+      <h3>Terms and Conditions</h3>
+      <p>By registering for the workshop you agree to abide by the following terms and conditions. Please read them carefully.</p>
+      <ol>
+        <li>This workshop is open to individuals who have completed the registration process.</li>
+        <li>Early registration is required to secure a spot. Seats are limited to 50 participants, and registration will be accepted on a first-come, first-served basis.</li>
+        <li>All attendees are required to bring their own laptop to participate effectively in the workshop.</li>
+      </ol>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script>
+    VANTA.NET({
+      el: "#vanta-bg",
+      mouseControls: true,
+      touchControls: true,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0xd4ff00,
+      backgroundColor: 0x1d0039
+    });
+
+    function showTerms() {
+      document.getElementById("termsModal").style.display = "block";
+    }
+
+    function hideTerms() {
+      document.getElementById("termsModal").style.display = "none";
+    }
+  </script>
+</body>
+
+</html>
